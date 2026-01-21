@@ -9,5 +9,36 @@ function load_script() {
 
 add_action('wp_enqueue_scripts','load_script');
 
+function config(){
+
+    register_nav_menus(
+        array(
+            'wp_devs_main_menu' => 'Main Menu',
+            'wp_devs_footer_menu' => 'Footer Menu'
+        ));
+}
+
+$args = array(
+    'width' => 225,
+    'height' => 1920
+);
+
+add_theme_support('custom-header', $args);
+add_theme_support('post-thumbnails');
+add_theme_support('coustom-logo', array(
+    'height' => 110,
+    'width' => 200,
+    'flex-height' => true,
+    'flex-width' =>
+));
+
+
+add_theme_support('automatic-feed-links');
+add_theme_support('html5', array('comment-list', 'comment-form', 'search-form', 'gallery', 'caption', 'style', 'script'));
+add_theme_support('title-tag');
+
+
+add_action('after_setup_theme', 'config', 0);
+
 
 ?>
