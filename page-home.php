@@ -1,5 +1,34 @@
 <?php get_header(); ?>
 
+<div id="content">
+    <div id="inner_container">
+        <div class="img_container">
+            <img src=" <?php echo get_template_directory_uri(); ?> /images/foto1.jpg">
+        </div>
+
+        <div id="img_container">
+            <img src=" <?php echo get_template_directory_uri(); ?> /images/foto2.jpg">
+        </div>
+
+        <div id="img_container">
+            <img src=" <?php echo get_template_directory_uri(); ?> /images/foto3.jpg">
+        </div>
+        
+        <div id="overlay">
+            <div id="left_button" class="overlay_button" onclick="onLeftButton()"> < </div>
+            <div id="right_button" class="overlay_button" onclick="onRightButton()"> > </div>
+        </div>
+
+        
+    </div>
+</div>
+
+        <div style="text-align:center;">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
 
 <div id="content" class="site-content">
     <div id="primary" class="content-area">
@@ -12,21 +41,24 @@
                 <h2>Services</h2>
                 <div class="container">
                     <div class="services-item">
-                        <?phpif(is_active_sidebar('services-1')){
+                        <?php
+                            if(is_active_sidebar('services-1')){
                             dynamic_sidebar('services-1');
                         }
                         ?>
                     </div>
 
                     <div class="services-item">
-                        <?phpif(is_active_sidebar('services-2')){
+                        <?php
+                            if(is_active_sidebar('services-2')){
                             dynamic_sidebar('services-2');
                         }
                         ?>
                     </div>
 
                     <div class="services-item">
-                        <?phpif(is_active_sidebar('services-3')){
+                        <?php
+                            if(is_active_sidebar('services-3')){
                             dynamic_sidebar('services-3');
                         }
                         ?>
@@ -64,3 +96,16 @@
 
 
 <?php get_footer(); ?>
+
+
+
+
+
+
+
+
+
+
+
+
+             
