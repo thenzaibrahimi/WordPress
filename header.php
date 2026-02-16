@@ -32,6 +32,9 @@
              </button>
              <?php wp_nav_menu(array('theme_location' => 'wp_devs_main_menu', 'depth' => 2));  ?>
          </nav>
+         <div class="header-search">
+            <?php get_search_form(); ?>
+         </div>
      </div>
   </section>
 
