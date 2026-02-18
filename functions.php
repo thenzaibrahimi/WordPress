@@ -29,8 +29,9 @@ add_theme_support('coustom-logo', array(
     'height' => 110,
     'width' => 200,
     'flex-height' => true,
-    'flex-width' =>
+    'flex-width' => true
 ));
+
 
 
 add_theme_support('automatic-feed-links');
